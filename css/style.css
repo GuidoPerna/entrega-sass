@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -14,7 +14,24 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    
+}
+
+h2 {
+    text-shadow: white;
+}
+
+.carousel-inner>.carousel-item>img {
+    width: 700px;
+    height: 1000px;
+}
+
+nav ul li:hover {
+    transition: 0.5s;
+    background-color: white;
+}
+
+#footer {
+    margin-top: 30px;
 }
 
 iframe {
@@ -25,29 +42,28 @@ iframe {
     margin: 20px 20px 0 20px;
 }
 
-
-nav ul li:hover{
-    transition: 0.5s;
-    background-color: white;
-    
+.contenedor-cards {
+    margin: 10px 100px 0px 100px;
 }
 
-h2{
-    text-shadow: white;
+.contenedor-cards img {
+    width: 175px;
+    height: 175px;
 }
 
-
-/* --- footer --- */
-
-
-
-#footer {
-    margin-top: 30px;
+@media screen and (min-width: 992px) {
+    .contenedor-cards img {
+        width: 250px;
+        height: 250px;
+    }
 }
 
-
-
-/* --- discografia --- */
+@media (min-width: 1px) and (max-width: 440px) {
+    .contenedor-cards img {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 #discografia img {
     width: 100%;
@@ -60,49 +76,34 @@ h2{
     transform: scale(1.1);
 }
 
-/* --- galeria --- */
-
-.carousel-inner>.carousel-item>img {
-    width: 700px;
-    height: 1000px;
-}
-
-
 .galeria-contenedor {
     padding: 2vh 7.5vw;
-
 }
 
-.galeria-grilla {
+.galeria-contenedor .galeria-grilla {
     height: 100%;
-
     display: grid;
     gap: 20px;
-
 }
 
-.galeria-grilla>img {
+.galeria-contenedor .galeria-grilla img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
-.galeria-grilla img:hover{
+.galeria-contenedor .galeria-grilla img:hover {
     transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-    .galeria-grilla{
+    .galeria-grilla {
         display: flex;
         flex-direction: column;
     }
-
 }
 
-
 @media (max-width: 992px) {
-    
     .galeria-grilla {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 40vh);
@@ -113,88 +114,56 @@ h2{
     .galeria-grilla {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(7, 40vh);
-
-        grid-template-areas:
-            "img1 img1 img1 img2 img2"
-            "img3 img3 img3 img2 img2"
-            "img4 img4 img5 img5 img5"
-            "img4 img4 img6 img6 img6"
-            "img7 img7 img7 img8 img8"
-            "img7 img7 img7 img8 img8"
-            "img9 img9 img10 img10 img10"
+        grid-template-areas: "img1 img1 img1 img2 img2""img3 img3 img3 img2 img2""img4 img4 img5 img5 img5""img4 img4 img6 img6 img6""img7 img7 img7 img8 img8""img7 img7 img7 img8 img8""img9 img9 img10 img10 img10";
     }
 
     .grilla-imagen1 {
         grid-area: img1;
     }
-    
+
     .grilla-imagen2 {
         grid-area: img2;
     }
-    
+
     .grilla-imagen1 {
         grid-area: img1;
     }
-    
+
     .grilla-imagen2 {
         grid-area: img2;
     }
-    
+
     .grilla-imagen3 {
         grid-area: img3;
     }
-    
+
     .grilla-imagen4 {
         grid-area: img4;
     }
-    
+
     .grilla-imagen5 {
         grid-area: img5;
     }
-    
+
     .grilla-imagen6 {
         grid-area: img6;
     }
-    
+
     .grilla-imagen7 {
         grid-area: img7;
     }
-    
+
     .grilla-imagen8 {
         grid-area: img8;
     }
-    
+
     .grilla-imagen9 {
         grid-area: img9;
     }
-    
+
     .grilla-imagen10 {
         grid-area: img10;
     }
 }
 
-
-/* --- historia --- */
-
-.contenedor-cards img{
-    width: 175px;
-    height: 175px;
-}
-
-.contenedor-cards{
-    margin: 10px 100px 0px 100px;
-}
-
-@media screen and (min-width: 992px){
-    .contenedor-cards img{
-        width: 250px;
-        height: 250px;
-    }
-}
-
-@media (min-width: 1px) and (max-width: 440px){
-    .contenedor-cards img{
-        width: 100px;
-        height: 100px;
-    }
-}
+/*# sourceMappingURL=style.css.map */
